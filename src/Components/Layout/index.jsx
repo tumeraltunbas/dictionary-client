@@ -1,9 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { Header } from "../Header/Header";
-import { Sidebar } from "../Sidebar/Sidebar";
+import { Header } from "../Header";
+import { Sidebar } from "../Sidebar";
 import { Outlet } from "react-router-dom";
-import { Footer } from "../Footer/Footer";
+import { Footer } from "../Footer";
+
 
 export const Layout = () => {
   return (

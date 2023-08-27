@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import { EntrySidebarCard } from "../EntrySidebarCard";
 
 export const Sidebar = () => {
