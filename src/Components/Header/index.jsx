@@ -23,8 +23,8 @@ export const Header = () => {
         </Col>
         <Col className="col-sm text-end">
             <div>
-                <Button className="m-1" children={<a href="#" className="text-light text-decoration-none">Sign Up</a>}/>
-                <Button className="m-1" children={<a href="#" className="text-light text-decoration-none">Sign In</a>}/>
+                <Button style={{margin: "2px"}} children="Sign Up"/>
+                <Button className="p-1" children="Sign In"/>
             </div>
         </Col>
       </Row>
