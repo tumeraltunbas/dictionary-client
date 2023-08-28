@@ -59,7 +59,7 @@ export const SignIn = () => {
           />
       </div>
 
-      <Button type="submit" children="Sign Up" className="mt-3" />
+      <Button type="submit" children="Sign In" className="mt-3" />
     </form>
     <ToastContainer />
     </>
