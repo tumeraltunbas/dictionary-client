@@ -38,7 +38,7 @@ export const SignUp = () => {
         if(data.success){
 
             //token handling
-
+            api.defaults.headers.common.Authorization = `Bearer ${data.accessToken}`;
             return navigate("/");
         }
         else{
