@@ -11,6 +11,7 @@ export const Layout = () => {
     <>
       <Container>
         <Header />
+        <hr/>
         <div className="row mt-3">
           <div className="col-3">
             <Sidebar />
