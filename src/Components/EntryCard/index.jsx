@@ -1,15 +1,15 @@
 import React from 'react';
-import {ArrowUpSquare, ArrowDownSquare, Droplet} from "react-bootstrap-icons"
+import {ArrowUpSquare, ArrowDownSquare, Droplet} from "react-bootstrap-icons";
+import moment from "moment";
 
-export const EntryCard = () => {
+export const EntryCard = (props) => {
   return (
 
     <div className="container">
         
-        <h3>Title</h3>
+        <h3>{props.content}</h3>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quo odio qui quasi. Fuga, modi voluptas repellendus soluta molestias exercitationem ea veniam ducimus ipsa, commodi velit facere. Veniam sint consectetur hic? Exercitationem sapiente minus tempora deleniti ab voluptatum quas, unde consectetur rem cupiditate dolorem blanditiis illum fugiat facere sequi molestias dolore saepe aliquid doloribus explicabo et beatae recusandae officiis fugit! Aspernatur iste, eligendi, cum esse nostrum inventore perspiciatis doloremque id incidunt dolores nesciunt veniam quod, illo et? Iure quam, eos unde doloremque veniam illo officia? Tenetur dolorem enim, nihil dignissimos sed illum reiciendis vero tempore praesentium iusto explicabo ipsum sit.
-        </p>
+        <p>{props.entries[0].content}</p>
 
         {/* interaction buttons  */}
         <div className="row" style={{width: "10vw"}}>
@@ -26,18 +26,21 @@ export const EntryCard = () => {
 
         {/* User Information */}
             
-        <div class="row justify-content-end">
-            <div class="col-md-3 text-end">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>username</p>
+        <div className="row justify-content-end">
+            <div className="col-md-3 text-end">
+                <div className="row">
+                    <div className="col-md-12">
+                        <p style={{fontSize: ".9rem"}} >{props.entries[0].user.username}</p>
                     </div>
-                    <div class="col-md-12">
-                        <p className='text-muted'>10.02.2023 10:50</p>
+                    <div className="col-md-12">
+                        <p 
+                        className='text-muted'
+                        style={{fontSize: ".8rem"}}
+                        >{moment(props.entries[0].createdAt).format("DD.MM.YYYY HH:MM")}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-1">
+            <div className="col-md-1">
                 <img src="/img/test-profile-image.jpg" alt="" style={{width: "4vw"}}/>
             </div>
         </div>
