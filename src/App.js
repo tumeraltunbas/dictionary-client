@@ -5,6 +5,7 @@ import { Layout } from './Components/Layout';
 import { SignUp } from './Components/Pages/Auth/SignUp';
 import { SignIn } from './Components/Pages/Auth/SignIn';
 import { VerifyEmail } from './Components/Pages/EmailVerification/Verify';
+import { Index } from './Components/Pages/Index';
 
 function App() {
   return (
@@ -12,12 +13,9 @@ function App() {
     <BrowserRouter>
     <Routes>
 
-      {/* <Route path="/auth" element={<Layout />}>
-        <Route path="sign/up" element={ <SignUp />} />
-        <Route path="sign/in" element={ <SignIn />} />
-      </Route> */}
-
       <Route path="/" element={<Layout />}>
+
+      <Route path="/" index element={<Index />}/>
 
         {/* Auth Routes*/}
         <Route path='auth'>
